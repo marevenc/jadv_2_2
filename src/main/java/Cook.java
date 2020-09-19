@@ -20,6 +20,7 @@ public class Cook {
     public void cookDish(){
         try {
             Thread.sleep(cookingTime);
+            System.out.println("Блюдо для " + Thread.currentThread().getName() + " готово");
             condition.signal();
         } catch (InterruptedException e) {
             e.printStackTrace();
